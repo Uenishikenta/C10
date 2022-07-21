@@ -1,16 +1,14 @@
 ﻿//ヘッダーファイルをインクルード
-
 #include "kimatu_data.h"
 #include "judge.cpp"
 #include "match.cpp"
-
 
 //sleep関数を使うための記述
 static void sleep(int seconds) {
     std::this_thread::sleep_for(std::chrono::seconds(seconds));
 }
 
-//Player_A
+//Player_Aのthread
 void Player_A() {
     int total = 0;      // 全単位数
     int num;
@@ -46,6 +44,7 @@ void Player_A() {
     printf("結果：Player_Aは %d 単位取得しました。\n", total);
 }
 
+//Player_Bのthread
 void Player_B() {
     int total = 0;       // 全単位数
     int num;
@@ -80,6 +79,7 @@ void Player_B() {
     printf("結果：Player_Bは %d 単位取得しました。\n", total);
 }
 
+//Player_Cのthread
 void Player_C() {
     int total = 0;      // 全単位数
     int num;
@@ -167,8 +167,8 @@ int main()
     printf("C:");
     scanf_s("%d", &C_Number);
     printf("Let's start!!!\n");
-    //スレッドを実行
 
+    //スレッドを実行
     std::thread personA(Player_A);
     std::thread personB(Player_B);
     std::thread personC(Player_C);
@@ -182,6 +182,7 @@ int main()
 
     //実行画面を長く見せる。
     sleep(5);
+
     //ファイル出力
     FILE* fp;
     errno_t error;
@@ -191,8 +192,8 @@ int main()
     else {
         char s_buf[BUFFSIZE];
         fprintf(fp, "Player_A: %d単位, Player_B: %d単位, Player_C: %d単位\n", A_sum, B_sum,C_sum);
-        fprintf(fp, "Player_A: %d位, Player_B: %d位, Player_C: %d位", A_result, B_result, C_result);
-        fprintf(fp, "あなたの予想:\n Player_A: %d位, Player_B: %d位, Player_C: %d位", A_Number, B_Number, C_Number);
+        fprintf(fp, "Player_A: %d位, Player_B: %d位, Player_C: %d位\n", A_result, B_result, C_result);
+        fprintf(fp, "あなたの予想:\nPlayer_A: %d位, Player_B: %d位, Player_C: %d位", A_Number, B_Number, C_Number);
         fclose(fp);
     }
     return 0;
