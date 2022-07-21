@@ -189,6 +189,7 @@ int main()
         char s_buf[BUFFSIZE];
         fprintf(fp, "Player_A: %d単位, Player_B: %d単位, Player_C: %d単位\n", A_sum, B_sum,C_sum);
         fprintf(fp, "Player_A: %d位, Player_B: %d位, Player_C: %d位", A_result, B_result, C_result);
+        fprintf(fp, "あなたの予想:\n Player_A: %d位, Player_B: %d位, Player_C: %d位", A_Number, B_Number, C_Number);
         fclose(fp);
     }
     return 0;
