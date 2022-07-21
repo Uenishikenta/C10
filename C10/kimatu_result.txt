@@ -1,2 +1,3 @@
-Player_A: 105単位, Player_B: 91単位, Player_C: 72単位
-Player_A: 1位, Player_B: 2位, Player_C: 3位
+Player_A: 76単位, Player_B: 100単位, Player_C: 90単位
+Player_A: 3位, Player_B: 1位, Player_C: 2位あなたの予想:
+ Player_A: 2位, Player_B: 3位, Player_C: 1位

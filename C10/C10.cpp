@@ -23,6 +23,7 @@ void Player_A() {
         sleep(A_idou_time);
 
         // 単位を取得する
+        
         num = A_have;
 
         // 学校から家に帰る
@@ -179,6 +180,8 @@ int main()
     judge();
     match();
 
+    //実行画面を長く見せる。
+    sleep(5);
     //ファイル出力
     FILE* fp;
     errno_t error;
