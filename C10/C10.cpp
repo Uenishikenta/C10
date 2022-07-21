@@ -10,6 +10,7 @@ static void sleep(int seconds) {
     std::this_thread::sleep_for(std::chrono::seconds(seconds));
 }
 
+//Player_A
 void Player_A() {
     int total = 0;      // 全単位数
     int num;
