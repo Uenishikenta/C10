@@ -8,7 +8,7 @@ static void sleep(int seconds) {
     std::this_thread::sleep_for(std::chrono::seconds(seconds));
 }
 
-//Player_Aのthread
+//Player_A thread
 void Player_A() {
     int total = 0;      // 全単位数
     int num;
